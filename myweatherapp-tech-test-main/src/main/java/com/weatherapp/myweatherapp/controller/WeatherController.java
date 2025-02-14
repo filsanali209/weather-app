@@ -23,7 +23,25 @@ public class WeatherController {
   }
 
   // TODO: given two city names, compare the length of the daylight hours and return the city with the longest day
+  @GetMapping("compare/daylight/{city1}/{city2}")
+  public ResponseEntity<String> compareDaylightHours(@PathVariable String city1, @PathVariable String city2) {
+    try {
+      String response = weatherService.compareDaylightHours(city1, city2);
+      return ResponseEntity.ok(response);
+    } catch (Exception e) {
+      return ResponseEntity.badRequest().body("Error: " + e.getMessage());
+    }
+  }
 
   // TODO: given two city names, check which city its currently raining in
+  @GetMapping("/raincheck/{city1}/{city2}")
+  public ResponseEntity<String> checkRain(@PathVariable String city1, @PathVariable String city2) {
+    try {
+      String result = weatherService.checkRain(city1, city2);
+      return ResponseEntity.ok(result);
+    } catch (Exception e) {
+      return ResponseEntity.badRequest().body("Error: " + e.getMessage());
+    }
+  }
 
 }

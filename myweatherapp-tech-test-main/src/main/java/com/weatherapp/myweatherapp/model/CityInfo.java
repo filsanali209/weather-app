@@ -17,7 +17,40 @@ public class CityInfo {
   @JsonProperty("days")
   List<Days> days;
 
-  static class CurrentConditions {
+  // getters and setters for cityInfo
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public CurrentConditions getCurrentConditions() {
+    return currentConditions;
+  }
+
+  public void setCurrentConditions(CurrentConditions currentConditions) {
+    this.currentConditions = currentConditions;
+  }
+
+  public List<Days> getDays() {
+    return days;
+  }
+
+  public void setDays(List<Days> days) {
+    this.days = days;
+  }
+
+  public static class CurrentConditions {
     @JsonProperty("temp")
     String currentTemperature;
 
@@ -35,6 +68,55 @@ public class CityInfo {
 
     @JsonProperty("conditions")
     String conditions;
+
+    // getters and setters for currentConditions
+    public String getCurrentTemperature() {
+      return currentTemperature;
+    }
+
+    public void setCurrentTemperature(String currentTemperature) {
+      this.currentTemperature = currentTemperature;
+    }
+
+    public String getSunrise() {
+      return sunrise;
+    }
+
+    public void setSunrise(String sunrise) {
+      this.sunrise = sunrise;
+    }
+
+    public String getSunset() {
+      return sunset;
+    }
+
+    public void setSunset(String sunset) {
+      this.sunset = sunset;
+    }
+
+    public String getFeelslike() {
+      return feelslike;
+    }
+
+    public void setFeelslike(String feelslike) {
+      this.feelslike = feelslike;
+    }
+
+    public String getHumidity() {
+      return humidity;
+    }
+
+    public void setHumidity(String humidity) {
+      this.humidity = humidity;
+    }
+
+    public String getConditions() {
+      return conditions;
+    }
+
+    public void setConditions(String conditions) {
+      this.conditions = conditions;
+    }
   }
 
   static class Days {
@@ -57,6 +139,54 @@ public class CityInfo {
     @JsonProperty("description")
     String description;
 
+    // getters and setters for days
+    public String getDate() {
+      return date;
+    }
+
+    public void setDate(String date) {
+      this.date = date;
+    }
+
+    public String getCurrentTemperature() {
+      return currentTemperature;
+    }
+
+    public void setCurrentTemperature(String currentTemperature) {
+      this.currentTemperature = currentTemperature;
+    }
+
+    public String getMaxTemperature() {
+      return maxTemperature;
+    }
+
+    public void setMaxTemperature(String maxTemperature) {
+      this.maxTemperature = maxTemperature;
+    }
+
+    public String getMinTemperature() {
+      return minTemperature;
+    }
+
+    public void setMinTemperature(String minTemperature) {
+      this.minTemperature = minTemperature;
+    }
+
+    public String getConditions() {
+      return conditions;
+    }
+
+    public void setConditions(String conditions) {
+      this.conditions = conditions;
+    }
+
+    public String getDescription() {
+      return description;
+    }
+
+    public void setDescription(String description) {
+      this.description = description;
+    }
   }
 
 }
